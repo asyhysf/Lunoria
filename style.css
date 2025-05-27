@@ -56,6 +56,8 @@ body {
     font-size: 1.8em;
     letter-spacing: 0.2em;
     font-family: 'Bodoni Moda', serif;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Banner */
