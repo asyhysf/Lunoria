@@ -1,0 +1,242 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #f3f3ee;
+    color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-left ul,
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    border-color: inherit;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8em;
+    letter-spacing: 0.2em;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 3em 0;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+}
+
+/* Catalog */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 1em 2em; /* ada top padding agar tidak tertutup navbar */
+}
+
+.product {
+    position: relative;
+    flex: 0 0 calc(100% / 2 - 1em);
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Popup info saat hover */
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.628);
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover .product-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-info h3 {
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.product-info a {
+    display: inline-block;
+    margin-top: 0.3em;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.product-info a:hover {
+    border-color: inherit;
+}
+
+/* Highlight box */
+.highlight .text-box {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1em;
+    text-align: center;
+}
+
+.highlight h3 {
+    margin: 0;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+.highlight a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2em 1em;
+    font-size: 1em;
+}
+
+.footer p {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 23px;
+    height: 23px;
+    transition: transform 0.3s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 23px;
+    height: 23px;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.bag-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.bag-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+        margin: 1em 0;
+    }
+
+    .catalog {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 8em;
+    }
+
+    .product {
+        flex: 0 0 90%;
+    }
+}
