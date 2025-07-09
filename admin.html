@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Lunoria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f8f3;
+            padding: 40px;
+            color: #1d1d1d;
+        }
+        h1, h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e0ddd4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .admin-section {
+            margin-bottom: 50px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        td ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        td ul li {
+            list-style-type: disc;
+            margin-bottom: 4px;
+        }
+        th {
+            background-color: #f3f2ed;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        .btn {
+            padding: 8px 14px;
+            background-color: #1d1d1d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        input, select {
+            padding: 8px;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <!-- Manajemen Produk -->
+    <div class="admin-section">
+        <h2>Manajemen Produk</h2>
+        <button class="btn">+ Tambah Produk</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Deskripsi</th>
+                    <th>Link Shopee</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sweet Love</td>
+                    <td>IDR 150.000</td>
+                    <td>Pokoknya parfum ini harum</td>
+                    <td><a href="#">Lihat di Shopee</a></td>
+                    <td><button class="btn">Edit</button> <button class="btn">Hapus</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Manajemen Pengguna -->
+    <div class="admin-section">
+        <h2>Manajemen Pengguna</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Pengguna</th>
+                    <th>Email</th>
+                    <th>Aktivitas Terakhir</th>
+                    <th>Wishlist</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>aisyah_y</td>
+                    <td>aisyah@example.com</td>
+                    <td>19 Juni 2025</td>
+                    <td>
+                        <ul>
+                            <li>Sweet Love</li>
+                            <li>Lunoria Swift</li>
+                            <li>Garden Wood</li>
+                        </ul>
+                    </td>
+                    <td><button class="btn">Reset Password</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

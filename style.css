@@ -64,7 +64,7 @@ body {
 .banner {
     text-align: center;
     padding: 3em 0;
-    font-size: 1.5em;
+    font-size: 2em;
     letter-spacing: 0.2em;
 }
 
@@ -74,7 +74,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
-    padding: 1em 1em 2em; /* ada top padding agar tidak tertutup navbar */
+    padding: 0em 1em 2em; /* ada top padding agar tidak tertutup navbar */
 }
 
 .product {
